@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Weather App</title>
+        <script
+            src="https://kit.fontawesome.com/de7be06a7c.js"
+            crossorigin="anonymous"
+        ></script>
+        <script src="./assets/js/moment.js"></script>
+        <link rel="stylesheet" href="./assets/style/index.css" />
+    </head>
+    <body>
+        <div class="container">
+            <div class="main-section">
+                <div class="search-bar">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                    <input
+                        class="search-bar-input"
+                        id="search-bar-input"
+                        class="search-bar-input"
+                        type="text"
+                        placeholder="Tìm kiếm thành phố"
+                    />
+                </div>
+
+                <div class="main-information">
+                    <h2 id="country" class="country">--</h2>
+                    <p id="describe-weather" class="describe-weather">--</p>
+                    <p class="temp-infor">
+                        <span class="temp" id="temp">--</span><sup>o</sup> C
+                    </p>
+                </div>
+            </div>
+            <!-- Desc -->
+            <hr />
+            <div class="desc-section">
+                <div class="desc-1 col1">
+                    <span class="sunUp" id="sunUp">Mặt trời mọc:</span>
+                    <span class="sunUp-time" id="sunUp-time">--:--</span>
+                </div>
+                <div class="desc-2 col2">
+                    <span class="sunDown" id="sunDown">Mặt trời lặn:</span>
+                    <span class="sunDown-time" id="sunDown-time">--:--</span>
+                </div>
+                <div class="desc-3 col1">
+                    <span class="humidity" id="humidity">Độ ẩm:</span>
+                    <span class="humidity-parameter" id="humidity-parameter"
+                        >--</span
+                    >
+                </div>
+                <div class="desc-4 col2">
+                    <span class="wind" id="wind">Tốc độ gió:</span>
+                    <span class="wind-parameter" id="wind-parameter">--</span>
+                </div>
+            </div>
+        </div>
+
+        <script src="./assets/js/index.js"></script>
+    </body>
+</html>
