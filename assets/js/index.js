@@ -22,7 +22,7 @@ searchInput.addEventListener('change', (e) => {
 
             describeWeather.innerHTML = data.weather[0].description || DEFAULT_VALUE;
 
-            temp.innerHTML = data.main.temp || DEFAULT_VALUE;
+            temp.innerHTML = Math.floor(data.main.temp) || DEFAULT_VALUE;
 
             sunUpTime.innerHTML = moment.unix(data.sys.sunrise).format('H:mm') || DEFAULT_VALUE;
 
@@ -30,7 +30,7 @@ searchInput.addEventListener('change', (e) => {
 
             humidityParameter.innerHTML = data.main.humidity || DEFAULT_VALUE;
 
-            wind.innerHTML = data.wind.speed * 3.6 || DEFAULT_VALUE;
+            wind.innerHTML = (data.wind.speed * 3.6).toFixed(1) || DEFAULT_VALUE;
 
         });
 });

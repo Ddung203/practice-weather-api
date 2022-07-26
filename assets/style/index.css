@@ -10,6 +10,14 @@ sup {
   font-size: smaller;
 }
 
+hr {
+  border: 1px solid white;
+}
+
+body {
+  background-color: #dff0ff;
+}
+
 .col1 {
   width: 160px;
   margin: 10px 15px;
@@ -24,7 +32,8 @@ sup {
   width: 400px;
   height: 600px;
   margin: 50px auto;
-  background-color: #52a4b8;
+  border-radius: 30px;
+  background-color: #51c0f8;
 }
 
 .search-bar {
@@ -39,7 +48,7 @@ sup {
 .search-bar .search-bar-input {
   width: 200px;
   margin-left: 10px;
-  background-color: #52a4b8;
+  background-color: #51c0f8;
   border: none;
   border-bottom: 2px solid #fff;
   outline: none;
@@ -84,6 +93,7 @@ sup {
   height: 200px;
   padding-left: 65px;
   padding-top: 57px;
+  border-radius: 20px;
   background-color: rgba(255, 255, 255, 0.5);
   font-size: 50px;
   font-weight: 600;
@@ -111,6 +121,6 @@ sup {
 .desc-section .humidity {
   font-weight: bold;
 }
-.desc-section .wind {
+.desc-section .desc-4 .wind {
   font-weight: bold;
 }/*# sourceMappingURL=index.css.map */

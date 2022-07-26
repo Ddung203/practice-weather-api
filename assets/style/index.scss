@@ -8,7 +8,12 @@ sup {
     vertical-align: text-top !important;
     font-size: smaller;
 }
-
+hr {
+    border: 1px solid white;
+}
+body {
+    background-color: #dff0ff;
+}
 .col1 {
     width: 160px;
     margin: 10px 15px;
@@ -18,11 +23,12 @@ sup {
     margin: 10px 15px;
 }
 
-$main-color: #52a4b8;
+$main-color: #51c0f8;
 .container {
     width: 400px;
     height: 600px;
     margin: 50px auto;
+    border-radius: 30px;
     background-color: $main-color;
 }
 .search-bar {
@@ -77,6 +83,7 @@ $main-color: #52a4b8;
         height: 200px;
         padding-left: 65px;
         padding-top: 57px;
+        border-radius: 20px;
         background-color: rgba($color: #fff, $alpha: 0.5);
         font-size: 50px;
         font-weight: 600;
@@ -106,7 +113,9 @@ $main-color: #52a4b8;
     .humidity {
         font-weight: bold;
     }
-    .wind {
-        font-weight: bold;
+    .desc-4 {
+        .wind {
+            font-weight: bold;
+        }
     }
 }
