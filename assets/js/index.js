@@ -17,20 +17,12 @@ searchInput.addEventListener('change', (e) => {
         .then(async res => {
             const data = await res.json();
             console.log('[Search Input]', data);
-
             cityName.innerHTML = data.name || DEFAULT_VALUE;
-
             describeWeather.innerHTML = data.weather[0].description || DEFAULT_VALUE;
-
             temp.innerHTML = Math.floor(data.main.temp) || DEFAULT_VALUE;
-
             sunUpTime.innerHTML = moment.unix(data.sys.sunrise).format('H:mm') || DEFAULT_VALUE;
-
             sunDownTime.innerHTML = moment.unix(data.sys.sunset).format('H:mm') || DEFAULT_VALUE;
-
             humidityParameter.innerHTML = data.main.humidity || DEFAULT_VALUE;
-
             wind.innerHTML = (data.wind.speed * 3.6).toFixed(1) || DEFAULT_VALUE;
-
         });
 });
