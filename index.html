@@ -1,64 +1,66 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8" />
-        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>Weather App</title>
-        <script
-            src="https://kit.fontawesome.com/de7be06a7c.js"
-            crossorigin="anonymous"
-        ></script>
-        <script src="./assets/js/moment.js"></script>
-        <link rel="stylesheet" href="./assets/style/index.css" />
-    </head>
-    <body>
-        <div class="container">
-            <div class="main-section">
-                <div class="search-bar">
-                    <i class="fa-solid fa-magnifying-glass"></i>
-                    <input
-                        class="search-bar-input"
-                        id="search-bar-input"
-                        class="search-bar-input"
-                        type="text"
-                        placeholder="Tìm kiếm thành phố"
-                    />
-                </div>
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0"
+    />
+    <link
+      rel="icon"
+      href="assets/imgs/logo.png"
+      type="image/png"
+    />
+    <title>Weather Chatbot</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.4/moment.min.js"></script>
 
-                <div class="main-information">
-                    <h2 id="country" class="country">--</h2>
-                    <p id="describe-weather" class="describe-weather">--</p>
-                    <p class="temp-infor">
-                        <span class="temp" id="temp"> -- </span><sup> o</sup>C
-                    </p>
-                </div>
-            </div>
-            <!-- Desc -->
-            <hr />
-            <div class="desc-section">
-                <div class="desc-1 col1">
-                    <span class="sunUp" id="sunUp">Mặt trời mọc:</span>
-                    <span class="sunUp-time" id="sunUp-time">--:--</span>
-                </div>
-                <div class="desc-2 col2">
-                    <span class="sunDown" id="sunDown">Mặt trời lặn:</span>
-                    <span class="sunDown-time" id="sunDown-time">--:--</span>
-                </div>
-                <div class="desc-3 col1">
-                    <span class="humidity" id="humidity">Độ ẩm:</span>
-                    <span class="humidity-parameter" id="humidity-parameter"
-                        >--</span
-                    >
-                </div>
-                <div class="desc-4 col2">
-                    <span class="wind" id="wind">Tốc độ gió:</span>
-                    <span class="wind-parameter" id="wind-parameter">--</span>
-                    <span> km/h</span>
-                </div>
-            </div>
+    <link
+      rel="stylesheet"
+      href="style.css"
+    />
+  </head>
+  <body>
+    <div class="chat-container">
+      <div class="chat-header">
+        <div class="avatar">
+          <img
+            src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%230976f2'%3E%3Cpath d='M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 3c1.66 0 3 1.34 3 3s-1.34 3-3 3-3-1.34-3-3 1.34-3 3-3zm0 14.2c-2.5 0-4.71-1.28-6-3.22.03-1.99 4-3.08 6-3.08 1.99 0 5.97 1.09 6 3.08-1.29 1.94-3.5 3.22-6 3.22z'/%3E%3C/svg%3E"
+            alt="Bot Avatar"
+          />
         </div>
+        <div class="info">
+          <h2>Weather Chat</h2>
+          <p>Online</p>
+        </div>
+      </div>
+      <div
+        id="chat-messages"
+        class="chat-messages"
+      >
+        <div class="message received">
+          Xin chào! Vui lòng nhập tên thành phố bạn muốn xem thời tiết.
+          <div class="time">00:00 AM</div>
+        </div>
+        <div class="typing-indicator">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+      </div>
+      <form
+        id="chat-input-form"
+        class="chat-input"
+        autocomplete="off"
+      >
+        <input
+          type="text"
+          id="city-input"
+          placeholder="Nhập tên thành phố..."
+        />
+        <button type="submit">Gửi</button>
+      </form>
+    </div>
 
-        <script src="./assets/js/index.js"></script>
-    </body>
+    <script src="./index.js"></script>
+  </body>
 </html>
